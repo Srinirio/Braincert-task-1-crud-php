@@ -23,7 +23,7 @@ if (isset($_POST["submit"])) {
         $result = mysqli_query($connect,$sql);
         if($result)
         {
-            header("location:index.php");
+            header("location:index.php?success=true");
         }
         else{
             die(mysqli_error($connect));

@@ -31,7 +31,7 @@ if (isset($_POST["submit"])) {
 
     $update_query = "UPDATE users SET Name='$name', Email='$email', Country='$country', State='$state', Phone='$phone' WHERE Id=$id";
     if (mysqli_query($connect, $update_query)) {
-        header("location:index.php");
+        header("location:index.php?update=true");
     } else {
         echo "Error updating record: " . mysqli_error($connect);
     }
